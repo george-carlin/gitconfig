@@ -1,0 +1,21 @@
+[user]
+	email = georgejulianmillo@gmail.com
+	name = George Millo
+[push]
+	default = simple
+[color]
+	ui = auto
+[core]
+	excludesfile = /Users/george/.gitignore_global
+	autocrlf = input
+[alias]
+	c = commit
+	last = log -1 HEAD
+  fix = "!f() { ${EDITOR} `git diff --name-only | uniq`; }; f"
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[heroku]
