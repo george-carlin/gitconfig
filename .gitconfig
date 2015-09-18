@@ -9,9 +9,10 @@
 	excludesfile = /Users/george/.gitignore_global
 	autocrlf = input
 [alias]
-	c = commit
-	last = log -1 HEAD
-  fix = "!f() { ${EDITOR} `git diff --name-only | uniq`; }; f"
+	c       = commit
+	last    = log -1 HEAD
+  fix     = "!f() { ${EDITOR} `git diff --name-only | uniq`; }; f"
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
